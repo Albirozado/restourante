@@ -1,0 +1,173 @@
+"use client"
+import {storage} from "../../../firebaseConfig"
+import {ref, getDownloadURL, uploadBytesResumable} from "firebase/storage"
+import React, {useState} from 'react'
+
+import image1 from "../../../public/image/ensaio/especial/1.jpg"
+import image2 from "../../../public/image/ensaio/especial/2.jpg"
+import image3 from "../../../public/image/ensaio/especial/3.jpg"
+import image4 from "../../../public/image/ensaio/especial/4.jpg"
+import carregarImagem from "../../../public/image/admin/pngwing.com.png"
+import styles from "../../components/ui/adminStyles.module.css"
+import Image from "next/image"
+import carregarPrato from "../../../public/image/admin/014upload2_99941.png"
+
+
+
+export default function Menu(){
+/*
+    onChange={(event) => uploadPostImage(event.target.files[0], setPostImage)}
+    onChange={(e)=>setPratoNome(e.target.value)}  value={pratonome}
+    onChange={(e)=>setPraDescri(e.target.value)} value={pratodescri}
+    onChange={(e)=>setPratoPreco(e.target.value)} value={pratopreco}
+    onChange={(e)=>setPratoCategoria(e.target.value)} value={pratocategoria}
+*/  const [postimage, setPostImage] = useState("")
+const [pratoimage, setPratoImage] = useState("")
+const [pratonome, setPratoNome] = useState("")
+const [pratodescri, setPratoDescri] = useState("")
+const [pratopreco, setPratoPreco] = useState(0)
+const [pratocategoria, setPratoCategoria] = useState("")
+
+const EnviarDados = async () =>{
+    try{
+        await fetch ("https://restouranteapinode.onrender.com/api/postprato", {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({pratoimage,pratonome, pratodescri, pratopreco, pratocategoria}),
+        })
+        if(response.ok){
+            console.log("dados enviados com sucesso")
+        } else{
+            console.log("Erro no envio de dados:", response.statusText);
+        }
+       
+        
+
+    }catch (error){
+        console.log(error)
+    }
+
+};
+
+
+    return(
+            <>
+           
+                    <section >
+                        <section className={styles.adminContent}>
+                                <form className={styles.menuAdmin} onSubmit={EnviarDados}>
+                                    
+                                        <input type={"file"} name="" id="uploadprato" hidden />
+                                            <label htmlFor="uploadprato" className={styles.carregarPrato}>
+                                                <span>carregar</span>
+                                                <div>
+                                                    <Image
+                                                    src={carregarPrato}
+                                                    width={20}
+                                                    height={20}
+                                                    />
+                                                </div>
+                                              
+                                            </label>
+                                            <input className={styles.input} type="text" placeholder="Nome do Praro"  onChange={(e)=>setPratoNome(e.target.value)}  value={pratonome}   />
+                                            <textarea className={styles.input} type="text" placeholder="Descricao"     onChange={(e)=>setPratoDescri(e.target.value)} value={pratodescri}/>
+                                            <input className={styles.input} type="text" placeholder="Preço" onChange={(e)=>setPratoPreco(e.target.value)} value={pratopreco}/>
+                                            <select name="sdgdga" id="" className={styles.select} >
+                                                <option className={styles.option} style={{display: "none"}}>Categoria</option>
+                                                <option className={styles.option} value="Cafe da Manha1" >Cafe da Manha1</option>
+                                                <option className={styles.option} value="Cafe da Manha2">Cafe da Manh2</option>
+                                                <option className={styles.option} value="Cafe da Manha3">Cafe da Manha3</option>
+                                                <option className={styles.option} value="Cafe da Manha4">Cafe da Manha4</option>
+                                            </select> 
+                                            <input type="text" onChange={(e)=>setPratoCategoria(e.target.value)} value={pratocategoria}/>
+                                            <input type="text" onChange={(e)=>setPratoImage(e.target.value)} value={pratoimage}/>
+
+                                            
+                                            <div style={{margin: "1rem auto"}}>
+                                                <button className={styles.button5} type="submit" role="button">Adicionar</button>
+                                            </div>
+
+                                            
+                                </form>
+                            <div className = {styles.galeriaAdmin}>
+                                <div className={styles.imageGaleria}>
+
+                                    <div>
+                                        <Image
+                                            src={image1}
+                                            style={{width: "15rem", height: "auto", maxWidth: "100%"}}
+                                        
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={image2}
+                                            style={{width: "15rem", height: "auto", maxWidth: "100%"}}
+                                        
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={image3}
+                                            style={{width: "15rem", height: "auto", maxWidth: "100%"}}
+                                        
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={image4}
+                                            style={{width: "15rem", height: "auto", maxWidth: "100%"}}
+                                        
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={image3}
+                                            style={{width: "15rem", height: "auto", maxWidth: "100%"}}
+                                        
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={image4}
+                                            style={{width: "15rem", height: "auto", maxWidth: "100%"}}
+                                        
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={image3}
+                                            style={{width: "15rem", height: "auto", maxWidth: "100%"}}
+                                        
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={image4}
+                                            style={{width: "15rem", height: "auto", maxWidth: "100%"}}
+                                        
+                                        />
+                                    </div>
+                                    <div className={styles.carregarImagem}>
+                                        <div>
+                                            <Image
+                                            src={carregarImagem}
+                                            style={{width: "5rem", height: "auto", maxWidth: "100%"}}
+                                            />
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                
+                            </div>                
+                        </section>
+
+                        
+                    </section>
+            </>
+    )
+
+}
+

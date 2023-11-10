@@ -1,0 +1,178 @@
+
+  
+  .menuAdmin{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  
+  }
+  .galeriaAdmin{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .adminMenu{
+    display: flex;
+    background-color: #212121;
+
+  }
+
+  .input {
+    width: 210px;
+    height: 50px;
+    padding: 0 16px;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #fe4567;
+    color: #caced1;
+    animation: shake_541 0.14s 3;
+    margin: 0 auto 1rem auto;
+  }
+  .input::before{
+    content: "eefsf";
+    display: block;
+
+  }
+  .labelAdmin{
+    margin: 0;
+
+  }
+  
+  .input:valid {
+    border-color: #caced1;
+    animation: none;
+  }
+  
+  @keyframes shake_541 {
+    0%, 100% {
+      translate: 0;
+    }
+  
+    25% {
+      translate: 8px 0;
+    }
+  
+    75% {
+      translate: -8px 0;
+    }
+  }
+
+  .select {
+    padding: 0.5rem 1rem;
+    width: 210px;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #caced1;
+    cursor: pointer;
+    border: 1px solid #caced1;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  .option{
+    background-color: #212121;
+    color: #caced1;
+    padding: 2rem 0;
+  }
+
+
+
+/* CSS */
+.button5 {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border-radius: .25rem;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0 auto;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button5:hover,
+.button5:focus {
+  background-color: #fb8332;
+}
+
+.button5:hover {
+  transform: translateY(-1px);
+}
+
+.button5:active {
+  background-color: #c85000;
+  transform: translateY(0);
+}
+
+.carregarPrato{
+  background-color: #caced1;
+  margin: 0 auto;
+  display: flex;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+
+}
+
+.carregarPrato span{
+  color: #212121;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+
+}
+
+.imageGaleria{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
+  padding: 0 1rem;
+  gap: 0.5rem;
+  
+}
+
+.carregarImagem{
+  background-color: #fff;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.containerPrev{
+  height: 10rem;
+  overflow-y: auto;
+  width: 35rem;
+  margin: 0 auto;
+  background-color: #ccc;
+  padding: 0.5rem 1rem;
+  
+
+}
+
+
+
+.modal button{
+  display: none;
+}
+
