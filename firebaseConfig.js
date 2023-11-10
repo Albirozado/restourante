@@ -15,10 +15,14 @@ const firebaseConfig = {
   messagingSenderId: "978358530675",
   appId: "1:978358530675:web:e20e455d3509757b5e7006",
   measurementId: "G- 26G3WVM0VJ"
-  
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
 const storage = getStorage()
 export {app, storage}
+
+
+//fazer assim
+
+
