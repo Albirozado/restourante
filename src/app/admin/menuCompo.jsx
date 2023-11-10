@@ -3,12 +3,10 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
 import {storage} from "../../../firebaseConfig"
 import {ref, getDownloadURL, uploadBytesResumable, deleteObject} from "firebase/storage"
-import PreviewPrato from "../../components/BackEnd/previewprato"
 import Image from 'next/image'
 import carregarPrato from "../../../public/image/admin/014upload2_99941.png"
 import styles from "../../components/ui/adminStyles.module.css"
 import { useRouter } from 'next/navigation'
-import {toast} from "react-toastify"
 import swal from "sweetalert"
 import { Progress } from 'antd';
 
