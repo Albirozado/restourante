@@ -28,10 +28,9 @@ const links = [
   return (
     <html lang="pt-br">
       <body>
-      {links.map ( (l) => 
-      
-      <NavLink key={l.id}  {...l}/>
-      )}
+      <header>
+        <NavLink/>
+      </header>
 
         <main> {children}</main>
       </body>
