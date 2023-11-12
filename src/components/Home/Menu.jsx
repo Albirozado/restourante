@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default async function Menu(){
    const  res = await fetch("https://restouranteapinode.onrender.com/api/getallprato",{
       cache: "no-cache"
@@ -23,7 +25,7 @@ export default async function Menu(){
                         <div className="tab-pane">
                            {data.map((m)=>(
                               <div className="media align-items-center mb-4 " key={m._id}>
-                                 <img className="avatar-sm rounded-circle mr-3" src={m.pratoimage} alt="image"/>
+                                 <Image width={100} height={100} className="avatar-sm rounded-circle mr-3" src={m.pratoimage} alt="image"/>
                                  <div className="media-body position-relative">
                                     <h6 className="mb-0 position-relative  z-index-2 font-size-15"><span className="bg-white">{m.pratonome}  </span></h6>
                                     <span className="dots-price"></span>
