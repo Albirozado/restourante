@@ -14,9 +14,9 @@ export default function RootLayout({
 }) {
   
 const links = [
-  {label: '🏡 Home', path: '/menu', targetSegment: null}, 
-  {label: '📦 lanches', path: '/menu/lanches', targetSegment: 'lanches'},
-  {label: '📘 About', path: '/about', targetSegment: 'about'}
+  {id: 1, label: '🏡 Home', path: '/menu', targetSegment: null}, 
+  {id: 2, label: '📦 lanches', path: '/menu/lanches', targetSegment: 'lanches'},
+  {id: 3, label: '📘 About', path: '/about', targetSegment: 'about'}
 
 
 ]
@@ -28,9 +28,9 @@ const links = [
   return (
     <html lang="pt-br">
       <body>
-      {links.map ( (l, i) => 
+      {links.map ( (l) => 
       
-      <NavLink key={i}  {...l}/>
+      <NavLink key={l.id}  {...l}/>
       )}
 
         <main> {children}</main>
