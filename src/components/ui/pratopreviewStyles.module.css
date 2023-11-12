@@ -1,13 +1,12 @@
 .boxPreview{
     color: #333;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 5fr 2fr;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
     border-radius: .35rem;
-    margin: 0.5rem 0;
-    padding: 0.5rem 0;
-
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
 
 
 }
@@ -25,4 +24,24 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: #333;
+}
+
+
+@media (max-width: 1184px) {
+    .deletePrat{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .boxPreview{
+        padding: 0.5rem 0rem;
+        position: relative;
+        margin: 0 0.5rem;
+        grid-template-columns: 2fr 5fr;
+
+
+    
+    
+    }
+    
 }

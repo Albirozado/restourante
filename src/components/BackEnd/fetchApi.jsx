@@ -33,9 +33,10 @@ export default async function fetchApi(){
                  <span>{p.pratopreco}</span> <br/>
                  <span>{p.pratocategoria}</span>
              </div>
-             <div> 
+             <div className={styles.deletePrat}> 
                  <DeletePrato id={p._id} urlimage = {p.pratoimage}/>
              </div>
+             
          </div>
 
          

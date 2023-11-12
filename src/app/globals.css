@@ -102,7 +102,6 @@ body{
 }
 
 
-
 .circle-divider{
   padding: 0 .7375rem;
   font-size: 1.225rem;
@@ -373,17 +372,10 @@ label {
   margin-bottom: 1rem;
 }
 
-button {
-  border-radius: 0;
-}
 
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
+
 
 input,
-button,
 select,
 optgroup,
 textarea {
@@ -393,25 +385,15 @@ textarea {
   line-height: inherit;
 }
 
-button,
 input {
   overflow: visible;
 }
 
-button,
 select {
   text-transform: none;
 }
 
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   padding: 0;
@@ -10690,3 +10672,4 @@ margin-top: 1.9rem;
 }
 }
 /*End mediaqueries*/
+

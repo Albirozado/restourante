@@ -7,7 +7,7 @@ import Image from "next/image"
 import PostGaleria from "../../components/BackEnd/PostGaleria"
 import DeleteGal from "@/components/BackEnd/DeleteGal"
 
-export default async function Galeria(){
+export default async function Galeria({galeriafoto}){
     const res = await fetch ("https://restouranteapinode.onrender.com/api/getallgaleria", {
         cache: "no-cache"
     })
@@ -16,11 +16,12 @@ export default async function Galeria(){
         <>
         <div className={styles.imageGaleria}>
             {data.map((image)=>(
-                <div key = {image._id} style={{position: "relative"}}>
+                <div key = {image._id} style={{position: "relative"}} className={styles.galBox}>
                     <img src={image.galeriafoto} alt="" style={{width: "15rem", height: "auto", maxWidth: "100%"}}/>
-                    <div style={{position: "absolute", top: "0.5rem"}}>
-                        <DeleteGal id = {image._id}/>
+                    <div style={{position: "absolute", top: "0.5rem"}} className={styles.contentDelete}>
+                        <DeleteGal id = {image._id} linkimage = {image.galeriafoto}/>
                     </div>
+
                 </div>
             ))}
         </div>    

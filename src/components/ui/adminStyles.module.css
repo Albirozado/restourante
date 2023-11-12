@@ -165,7 +165,8 @@
   width: 35rem;
   margin: 0 auto;
   background-color: #ccc;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
+  max-width: 100%;
   
 
 }
@@ -176,3 +177,20 @@
   display: none;
 }
 
+
+.contentDelete{
+  display: none;
+}
+.galBox:hover .contentDelete{
+  display: block;
+}
+
+/*adminMenu*/
+
+@media (max-width: 1184px) {
+    .adminMenu{
+      display: block;
+      
+        
+    }
+}

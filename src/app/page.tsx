@@ -5,6 +5,7 @@ import Especial from "../components/Home/Especial"
 import Menu from "../components/Home/Menu"
 import Services from "../components/Home/Services"
 import Galeria from "../components/Home/Galeria"
+import GetFastFood from "../components/BackEnd/GetFastFood"
 export default function Home() {
   return (
     <>
@@ -14,7 +15,9 @@ export default function Home() {
       <Especial/>
       <Menu/>
       <Services/>
-      <Galeria/>
+      <div style={{ padding: "0 2rem"}}>
+        <GetFastFood/>
+      </div>
     </>
   );
 }

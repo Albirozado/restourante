@@ -6,6 +6,8 @@ import carregarImagem from "../../../public/image/admin/pngwing.com.png"
 import { storage } from "../../../firebaseConfig"
 import {ref, getDownloadURL, uploadBytesResumable, deleteObject} from "firebase/storage"
 import { useRouter } from "next/navigation"
+import { Button, Spin } from 'antd';
+import getGaleriaAdmin from "../../app/admin/getGaleriaAdmin"
 
 
 
@@ -28,9 +30,9 @@ export default function PostGaleria(){
       
               // Verifica se o progresso atingiu 100 antes de atualizar o estado
               if (newProgress === 100) {
-                setProgress(newProgress);
-               UploadGaleria();
-                router.refresh()
+                setTimeout(() => {
+                    setProgress(newProgress);
+                  }, 5000);
               } else {
                 setProgress(newProgress);
               }
@@ -39,7 +41,7 @@ export default function PostGaleria(){
             console.error(error)
         }, ()=>{
             getDownloadURL(uploadTask.snapshot.ref).then((response)=>{
-                setGaleriafoto(response)
+                setGaleriafoto(response) 
     
             })
         
@@ -49,6 +51,7 @@ export default function PostGaleria(){
     }
 
     const UploadGaleria = async () =>{
+
 
         try{
 
@@ -60,6 +63,10 @@ export default function PostGaleria(){
                 body: JSON.stringify({galeriafoto})
     
             })
+
+            router.refresh()
+            setGaleriafoto("")
+            setProgress(0)
         }catch (error){
             console.log(error)
         }
@@ -82,6 +89,18 @@ export default function PostGaleria(){
 
                     </label>
                     <input type="text" onChange={(e)=>setGaleriafoto(e.target.value)} value={galeriafoto} hidden/>
+                    {progress === 100 || progress === 0? 
+                    <div style={{ margin: "0 auto", display: "flex", justifyContent: "center"}}>
+
+                        <Button size="middle" disabled = {progress === 100 ? false : true} onClick={UploadGaleria}
+                        style={{ backgroundColor: "white", fontWeight: "900"}}>POSTAR</Button>
+                    </div>
+                        :
+                        <div style={{display: "flex", justifyContent: "center"}}>
+                            <Spin/> 
+                        </div>
+                    }
+                   
                 </form>
         </>
     )

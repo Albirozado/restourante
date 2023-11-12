@@ -1,8 +1,12 @@
 "use client"
 import { useRouter } from "next/navigation"
+import {storage} from "../../../firebaseConfig"
+import { ref, deleteObject } from "firebase/storage";
 
-export default function DeleteGal({id}) {
+export default function DeleteGal({id, linkimage}) {
     const router = useRouter()
+    const desertRef = ref(storage, linkimage);
+
     const DeleteGaleria = async () =>{
         try {
             await fetch (`https://restouranteapinode.onrender.com/api/deletegaleria/${id}`, {
@@ -10,7 +14,14 @@ export default function DeleteGal({id}) {
             })
             router.refresh()
             console.log("delete is done")
-            
+            // Create a reference to the file to delete
+
+            // Delete the file
+            deleteObject(desertRef).then(() => {
+            console.log("File deleted successfully")
+            }).catch((error) => {
+            console.log("Uh-oh, an error occurred!")
+            });
         } catch (error) {
             console.log(error)
             
