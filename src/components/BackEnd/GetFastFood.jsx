@@ -1,48 +1,21 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import { Image } from 'antd';
-
-export default function GetFastFood() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("https://restouranteapinode.onrender.com/api/getallgaleria", {
-      cache: "no-store",
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        setData(result);
-      })
-      .catch((error) => {
-        // Lidar com erros aqui
-        console.error("Erro ao buscar dados:", error);
-      });
-  }, []); // O array vazio assegura que o efeito é executado apenas uma vez (equivalente a componentDidMount)
-
+import Image from "next/image";
+import styles from "../ui/adminStyles.module.css"
+export default async function GetFastFood() {
+  const responde = await fetch("https://restouranteapinode.onrender.com/api/getallgaleria",{
+    cache: "no-cache"
+  })
+  const data = await responde.json() 
   return (
-    <>
-    {data === 0 ? 
-        <>
-              <h1>CARREGANDO...</h1>
-        </>
-        :
-        <>
+    <div className={styles.imageGaleria}>
 
+        {data.map((g) => (
 
-        {data.map((p) => (
+              <div key = {g._id} style={{position: "relative", display: "flex"}} className={styles.galBox}>
+                  <Image src={g.galeriafoto} alt="" width={400} height={400} style={{maxWidth: "100%"}}/>
 
-              <Image.PreviewGroup 
-                  preview={{
-                    onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
-                  }}
-                  
-                  
-                >
-                  <Image width={200} style={{maxWidth: "100%"}} src={p.galeriafoto} key={p._id} />
-              </Image.PreviewGroup>
+              </div>
         ))}
-        </>
-    }
-    </>
+        
+    </div>
   );
 }

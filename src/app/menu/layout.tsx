@@ -1,25 +1,18 @@
 
-import NavLink from "../../components/menu/NavLink"
+import NavBar from '@/components/Home/NavBar'
 import type { Metadata } from 'next'
-
-
+import dynamic from "next/dynamic"
+const NavLink = dynamic(() => import('../../components/menu/NavLink'), { ssr: false })
 export const metadata: Metadata = {
   title: 'RESTAURANTE MENU',
   description: 'O MELHOR RESTAURANTE DE MAPUT',
 }
-export default function RootLayout({
+export default function MenuLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  
-const links = [
-  {id: 1, label: '🏡 Home', path: '/menu', targetSegment: null}, 
-  {id: 2, label: '📦 lanches', path: '/menu/lanches', targetSegment: 'lanches'},
-  {id: 3, label: '📘 About', path: '/about', targetSegment: 'about'}
 
-
-]
 
 
 
@@ -27,13 +20,19 @@ const links = [
 
   return (
     <html lang="pt-br">
-      <body>
-      <header>
-        <NavLink/>
-      </header>
-
+      <body >    
+          <header>
+            <NavBar/>
+            <NavLink/>
+          </header>
         <main> {children}</main>
       </body>
     </html>
   )
 }
+
+ /* 
+
+
+*/
+

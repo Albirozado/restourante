@@ -1,7 +1,7 @@
 import styles from "../../components/ui/pratopreviewStyles.module.css"
 import lanche from "../../../public/image/ensaio/menu/lunch/1.jpg"
 import Image from "next/image";
-import DeletePrato from "../BackEnd/DeletePrato"
+import DeletePrato from "./DeletePrato"
 import Link from "next/link";
 
 export default async function fetchApi(){
@@ -24,10 +24,10 @@ export default async function fetchApi(){
          
          <div className={styles.contentPreview} key={p._id}>
          <div className={styles.boxPreview}>
-             <div className={styles.image}>
-                <img src= {p.pratoimage} alt="" className={styles.imagePrato}/>
+             <div className={styles.image} >
+                <img src= {p.pratoimage} alt="" className={styles.imagePrato} style={{borderRadius: "5px"}}/>
              </div>
-             <div style={{padding: "0 3rem"}}>
+             <div className={styles.testContent}>
                  <span className={styles.pratonome}>{p.pratonome}</span>
                  <p>{p.pratodescri}</p>
                  <span>{p.pratopreco}</span> <br/>

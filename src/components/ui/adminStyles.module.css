@@ -19,6 +19,7 @@
   .adminMenu{
     display: flex;
     background-color: #212121;
+    min-height: 80vh;
 
   }
 
@@ -184,6 +185,10 @@
 .galBox:hover .contentDelete{
   display: block;
 }
+.galele{
+  display: none;
+}
+
 
 /*adminMenu*/
 

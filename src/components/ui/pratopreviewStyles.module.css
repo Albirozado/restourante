@@ -25,7 +25,15 @@
     font-weight: 700;
     color: #333;
 }
+.testContent{
+    padding: 0 2rem;
+}
 
+@media (max-width: 600px) {
+    .testContent{
+        padding: 0 1.5rem;
+    }
+}
 
 @media (max-width: 1184px) {
     .deletePrat{

@@ -25,7 +25,7 @@ export default async function Menu(){
                         <div className="tab-pane">
                            {data.map((m)=>(
                               <div className="media align-items-center mb-4 " key={m._id}>
-                                 <Image width={100} height={100} className="avatar-sm rounded-circle mr-3" src={m.pratoimage} alt="image"/>
+                                 <Image width={100} height={100} className="avatar-sm rounded-circle mr-3" src={m.pratoimage} alt=""/>
                                  <div className="media-body position-relative">
                                     <h6 className="mb-0 position-relative  z-index-2 font-size-15"><span className="bg-white">{m.pratonome}  </span></h6>
                                     <span className="dots-price"></span>

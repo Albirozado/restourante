@@ -297,7 +297,7 @@ sup {
 }
 
 a {
-  color: #b5a46d;
+  color: #877950;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -10476,9 +10476,7 @@ font-size: 3rem;
  max-height: 100vh;
  overflow-y: scroll;
 }
-.footer{
-margin-top: 1.9rem;
-}
+
 .display-4{
 font-size: 3rem;
 }
@@ -10625,9 +10623,7 @@ height: 100vh;
 }
 }
 @media (max-width: 767.98px) {
-.footer{
-margin-top: 1.9rem;
-}
+
 }
 @media(min-width:768px){
 .flex-md-row {
@@ -10667,9 +10663,7 @@ h1, .h1{
 h2, .h2{
  font-size: 1.875rem
 }
-.footer{
-margin-top: 1.9rem;
-}
+
 }
 /*End mediaqueries*/
 
