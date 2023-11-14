@@ -44,7 +44,7 @@
     .boxPreview{
         padding: 0.5rem 0rem;
         position: relative;
-        margin: 0 0.5rem;
+        margin: 0.8rem 0.5rem;
         grid-template-columns: 2fr 5fr;
 
 

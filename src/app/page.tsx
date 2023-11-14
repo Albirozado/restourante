@@ -15,7 +15,7 @@ export default function Home() {
       <Especial/>
       <Menu/>
       <Services/>
-      <div style={{ padding: "0 2rem"}}>
+      <div style={{ padding: "0 0.5rem"}}>
         <GetFastFood/>
       </div>
     </>
