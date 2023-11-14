@@ -127,10 +127,11 @@ const EnviarDados = async (e) =>{
                                             <input className={styles.input} type="number" placeholder="Preço" onChange={(e)=>setPratoPreco(e.target.value)} value={pratopreco}/>
                                             <select name="sdgdga" id="" className={styles.select}  onChange={(e)=>setPratoCategoria(e.target.value)} value={pratocategoria}>
                                                 <option className={styles.option} style={{display: "none"}}>Categoria</option>
-                                                <option className={styles.option} value="FastFood" >FastFood</option>
-                                                <option className={styles.option} value="Cafe da Manha">Cafe da Manha</option>
-                                                <option className={styles.option} value="Almonço">Almonço</option>
-                                                <option className={styles.option} value="Sobremensa">Sobremensa</option>
+                                                <option className={styles.option} value="maispedidos">Mais Pedidos</option>
+                                                <option className={styles.option} value="cafe" >Cafe</option>
+                                                <option className={styles.option} value="entradas">Entradas</option>
+                                                <option className={styles.option} value="principal">Prato Principal</option>
+                                                <option className={styles.option} value="sobremesa">Sobremensa</option>
                                             </select> 
                                             <input type="text"   value={pratoimage} style={{display: "none"}}/>
 
