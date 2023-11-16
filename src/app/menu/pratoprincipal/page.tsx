@@ -1,7 +1,7 @@
 import MenuCompo from "@/components/menu/MenuCompo"
 
-export default async function MenuPage(){
-    const response = await fetch("https://smiling-gray-centipede.cyclic.app/api/getcafe",{
+export default async function PratoPrincipalPage(){
+    const response = await fetch("https://smiling-gray-centipede.cyclic.app/api/getprincipal",{
         cache: "no-cache"
     })
     const data = await response.json()
@@ -25,4 +25,5 @@ export default async function MenuPage(){
 
         </section>
     )
+
 }
