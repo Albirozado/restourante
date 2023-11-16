@@ -22,7 +22,7 @@ export default function MenuLayout({
     <html lang="pt-br">
       <body >    
           <header>
-            <NavBar/>
+            <NavBar sobre = "/#sobre" reserva = "#reserva" especial = "#especial"/>
             <NavLink/>
           </header>
         <main> {children}</main>
