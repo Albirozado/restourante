@@ -5,7 +5,7 @@ import Especial3 from "../../../public/image/ensaio/especial/3.jpg"
 import Especial4 from "../../../public/image/ensaio/especial/4.jpg"
 export default function Especial(){
     return(
-        <section id="special"  className="spacer-double-lg" style={{paddingTop: "6rem"}}>
+        <section id="especial"  className="spacer-double-lg" style={{paddingTop: "6rem"}}>
             <div className="container">
                <div className="row justify-content-center">
                   <div className="col">

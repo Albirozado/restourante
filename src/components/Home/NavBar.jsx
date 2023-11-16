@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Menu } from 'lucide-react';
 import styles from "../ui/navBarStyles.module.css"
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [showNavbar, setShowNavbar] = React.useState(false);
 
   const handleShowNavbar = () => {
@@ -23,19 +23,19 @@ const NavBar = () => {
         <div className={`${styles.navElement} navElement   ${showNavbar && "active"}`}>
           <ul className={styles.lista}>
             <li>
-              <Link href="/blogs">Sobre</Link>
+              <Link href={props.sobre}>Sobre</Link>
             </li>
 
             <li>
-              <Link href="/projects">Reserva</Link>
+              <Link href={props.reserva}>Reserva</Link>
             </li>
 
             <li>
-              <Link href="/about">Especial</Link>
+              <Link href={props.especial}>Especial</Link>
             </li>
 
             <li>
-              <Link href="/contact">Menu</Link>
+              <Link href="/menu">Menu</Link>
             </li>
             <li>
               <Link href="/Serviços">Serviços</Link>

@@ -57,7 +57,7 @@ const uploadPostImage = (file) =>{
 const EnviarDados = async (e) =>{
     e.preventDefault();
     try{
-        await fetch ("https://restouranteapinode.onrender.com/api/postprato", {
+        await fetch ("https://smiling-gray-centipede.cyclic.app/api/postprato", {
             method: "post",
             headers: {
                 "content-type": "application/json"

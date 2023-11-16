@@ -10,7 +10,7 @@ const router = useRouter()
 const desertRef = ref(storage, urlimage);
 
     const deletePrato =  async () =>{
-        await fetch(`https://restouranteapinode.onrender.com/api/deleteprato/${id}` ,{
+        await fetch(`https://smiling-gray-centipede.cyclic.app/api/deleteprato/${id}` ,{
             method: "delete"
         })
         router.refresh()

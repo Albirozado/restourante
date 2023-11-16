@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 export default async function Menu(){
-   const  res = await fetch("https://restouranteapinode.onrender.com/api/getallprato",{
+   const  res = await fetch("https://smiling-gray-centipede.cyclic.app/api/getmaispedidos",{
       cache: "no-cache"
    })
    const data = await res.json()

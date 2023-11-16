@@ -55,7 +55,7 @@ export default function PostGaleria(){
 
         try{
 
-            await fetch ("https://restouranteapinode.onrender.com/api/postgaleria", {
+            await fetch ("https://smiling-gray-centipede.cyclic.app/api/postgaleria", {
                 method: "post",
                 headers: {
                     "content-type": "application/json"

@@ -16,8 +16,8 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-       <header><NavBar/></header>
-        <main style={{minHeight: "75vh"}}> {children}</main>
+       <header><NavBar sobre = "#sobre" reserva = "#reserva" especial = "#especial"/></header>
+        <main style={{minHeight: "30vh"}}>{children}</main>
         <footer><Footer/></footer>
 
       </body>

@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function Reserva(){
     return(
-        <section className="no-gutters">
+        <section className="no-gutters" id="reserva">
             <div className="container-fluid">
                <div className="row ">
                   <div className="col-lg-6 bg-secondary ">

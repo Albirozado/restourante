@@ -5,7 +5,7 @@ import DeletePrato from "./DeletePrato"
 import Link from "next/link";
 
 export default async function fetchApi(){
-    const res = await fetch ("https://restouranteapinode.onrender.com/api/getallprato",{
+    const res = await fetch ("https://smiling-gray-centipede.cyclic.app/api/getallprato",{
         cache: "no-store",
       });
     const data = await res.json()

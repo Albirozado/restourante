@@ -8,7 +8,7 @@ import PostGaleria from "../../components/BackEnd/PostGaleria"
 import DeleteGal from "@/components/BackEnd/DeleteGal"
 
 export default async function Galeria({galeriafoto}){
-    const res = await fetch ("https://restouranteapinode.onrender.com/api/getallgaleria", {
+    const res = await fetch ("https://smiling-gray-centipede.cyclic.app/api/getallgaleria", {
         cache: "no-cache"
     })
     const data = await res.json()

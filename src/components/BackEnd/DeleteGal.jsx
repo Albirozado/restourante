@@ -9,7 +9,7 @@ export default function DeleteGal({id, linkimage}) {
 
     const DeleteGaleria = async () =>{
         try {
-            await fetch (`https://restouranteapinode.onrender.com/api/deletegaleria/${id}`, {
+            await fetch (`https://smiling-gray-centipede.cyclic.app/api/deletegaleria/${id}`, {
                 method: "delete"
             })
             router.refresh()

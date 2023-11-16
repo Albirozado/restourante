@@ -1,9 +1,7 @@
-import Image from "next/image"
-import ImageTest from "../../../../public/image/ensaio/especial3.jpg" 
 import MenuCompo from "@/components/menu/MenuCompo"
 
-export default async function Entradapage(){
-    const response = await fetch("https://smiling-gray-centipede.cyclic.app/api/getentradas",{
+export default async function SobremesaPage(){
+    const response = await fetch("https://smiling-gray-centipede.cyclic.app/api/getsobremensa",{
         cache: "no-cache"
     })
     const data = await response.json()

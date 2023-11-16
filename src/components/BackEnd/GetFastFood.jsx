@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../ui/adminStyles.module.css"
 export default async function GetFastFood() {
-  const responde = await fetch("https://restouranteapinode.onrender.com/api/getallgaleria",{
+  const responde = await fetch("https://smiling-gray-centipede.cyclic.app/api/getallgaleria",{
     cache: "no-cache"
   })
   const data = await responde.json() 

@@ -9,7 +9,7 @@ import offset2 from "../../../public/image/ensaio//about/2.jpg"
 
 export default function Sobre(){
     return(
-        <section id="about"  className="spacer-double-lg" style={{paddingTop: "6rem"}}>
+        <section id="sobre"  className="spacer-double-lg" style={{paddingTop: "6rem"}}>
             <div className="container">
                <div className="row justify-content-between align-items-center">
                   <div className="col-lg-5 mb-6 mb-lg-0">
