@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Menu } from 'lucide-react';
 import styles from "../ui/navBarStyles.module.css"
 
-const NavBar = (props) => {
+const NavBar = (props: any) => {
   const [showNavbar, setShowNavbar] = React.useState(false);
 
   const handleShowNavbar = () => {
@@ -15,7 +15,10 @@ const NavBar = (props) => {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <div className={styles.logo}>
+          <a href="/">
            <span>LOGO</span>
+
+          </a>
         </div>
         <div className={styles.menuIcon} onClick={handleShowNavbar}>
            <Menu/>
@@ -23,22 +26,22 @@ const NavBar = (props) => {
         <div className={`${styles.navElement} navElement   ${showNavbar && "active"}`}>
           <ul className={styles.lista}>
             <li>
-              <Link href={props.sobre}>Sobre</Link>
+              <a href={props.sobre}>Sobre</a>
             </li>
 
             <li>
-              <Link href={props.reserva}>Reserva</Link>
+              <a href={props.reserva}>Reserva</a>
             </li>
 
             <li>
-              <Link href={props.especial}>Especial</Link>
+              <a href={props.especial}>Especial</a>
             </li>
 
             <li>
-              <Link href="/menu">Menu</Link>
+              <a href="/menu">Menu</a>
             </li>
             <li>
-              <Link href="/Serviços">Serviços</Link>
+              <a href="/Serviços">Serviços</a>
             </li>
 
           </ul>

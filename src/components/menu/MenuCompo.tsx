@@ -1,6 +1,12 @@
 import Image from "next/image";
+import { arrayBuffer } from "node:stream/consumers";
+import {getPlaiceholder} from "plaiceholder"
 
-export default function MenuCompo(props : any){
+export default async function MenuCompo(props : any){
+    const buffer = await fetch(props.img).then(async (res) =>{
+        return Buffer.from(await res.arrayBuffer())
+})
+const {base64} = await getPlaiceholder(buffer) 
     return(
         <>
         <div >
@@ -21,6 +27,8 @@ export default function MenuCompo(props : any){
                         height={200}
                         src={props.img}
                         alt="image"
+                        placeholder="blur"
+                        blurDataURL={base64}
                     />
                 </div>
             </div>
