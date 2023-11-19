@@ -13,9 +13,9 @@ export default function Services(){
            <div className="row justify-content-center">
               <div className="col">
                  <div className="mb-5 pb-5 text-center">
-                    <span className="label-title mb-3">Our Services</span>
-                    <h1 className="h2 font-alt">Customers Services</h1>
-                    <p className="w-md-40 mb-0 mx-auto lead">The time has come to bring those ideas and plans to life. This is where we really begin to visualize.</p>
+                    <span className="label-title mb-3">Nossos Serviços</span>
+                    <h1 className="h2 font-alt">Serviços para Clientes</h1>
+                    <p className="w-md-40 mb-0 mx-auto lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                  </div>
               </div>
            </div>
@@ -27,8 +27,8 @@ export default function Services(){
                     <div className="card-body p-0">
                        <Image className="max-width-sm mb-3" src={medal} alt="" style={{margin: "0 auto"}}/>
                        <div>
-                          <h4 className="h6 mb-2">Quality Check</h4>
-                          <p className="mb-0">Web development refers to the tasks of developing websites for hosting via intranet or internet.</p>
+                          <h4 className="h6 mb-2">Qualidade Conferida</h4>
+                          <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                        </div>
                     </div>
                  </div>
@@ -38,8 +38,8 @@ export default function Services(){
                     <div className="card-body p-0">
                        <Image className="max-width-sm mb-3" src={open} alt="" style={{margin: "0 auto"}}/>
                        <div>
-                          <h4 className="h6 mb-2">Opens 24/7</h4>
-                          <p className="mb-0">Web design require many different skills and disciplines in the production and maintenance of websites.</p>
+                          <h4 className="h6 mb-2">Aberto 24/7</h4>
+                          <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                        </div>
                     </div>
                  </div>
@@ -49,9 +49,10 @@ export default function Services(){
                     <div className="card-body p-0">
                        <Image className="max-width-sm mb-3" src={parking} alt="" style={{margin: "0 auto"}}/>
                        <div>
-                          <h4 className="h6 mb-2">Free Parking</h4>
-                          <p className="mb-0">Web design require many different skills and disciplines in the production and maintenance of websites.</p>
+                          <h4 className="h6 mb-2">Estacionamento</h4>
+                          <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                        </div>
+
                     </div>
                  </div>
               </div>
@@ -60,8 +61,8 @@ export default function Services(){
                     <div className="card-body p-0">
                        <Image className="max-width-sm mb-3" src={chef} alt="" style={{margin: "0 auto"}}/>
                        <div>
-                          <h4 className="h6 mb-2">Food Meets Style</h4>
-                          <p className="mb-0">Web development refers to the tasks of developing websites for hosting via intranet or internet.</p>
+                          <h4 className="h6 mb-2">Melhores Chefes</h4>
+                          <p className="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                        </div>
                     </div>
                  </div>

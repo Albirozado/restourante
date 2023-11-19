@@ -12,8 +12,8 @@ export default async function Menu(){
               <div className="col">
                  <div className="mb-5 pb-5 text-center">
                     <span className="label-title mb-3">Nosso Menu</span>
-                    <h1 className="h2 font-alt">Resort Menu</h1>
-                    <p className="w-md-40 mb-0 mx-auto lead">The time has come to bring those ideas and plans to life. This is where we really begin to visualize.</p>
+                    <h1 className="h2 font-alt">Menu (Destaque)</h1>
+                    <p className="w-md-40 mb-0 mx-auto lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                  </div>
               </div>
            </div>

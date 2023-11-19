@@ -1,8 +1,8 @@
 import Image from "next/image"
-import Especial1 from "../../../public/image/ensaio/especial/1.jpg"
-import Especial2 from "../../../public/image/ensaio/especial/2.jpg"
-import Especial3 from "../../../public/image/ensaio/especial/3.jpg"
-import Especial4 from "../../../public/image/ensaio/especial/4.jpg"
+import Especial1 from "../../../public/image/ensaio/especial/1rect.png"
+import Especial2 from "../../../public/image/ensaio/especial/2rect.png"
+import Especial3 from "../../../public/image/ensaio/especial/3rect.png"
+import Especial4 from "../../../public/image/ensaio/especial/4rect.png"
 export default function Especial(){
     return(
         <section id="especial"  className="spacer-double-lg" style={{paddingTop: "6rem"}}>
@@ -12,7 +12,7 @@ export default function Especial(){
                      <div className="mb-5 pb-5 text-center">
                         <span className="label-title mb-3">Nossos Especiais</span>
                         <h1 className="h2 font-alt">Especial de hoje</h1>
-                        <p className="w-md-40 mb-0 mx-auto lead">Chegou a hora de dar vida a essas ideias e planos. É aqui que realmente começamos a visualizar.</p>
+                        <p className="w-md-40 mb-0 mx-auto lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                      </div>
                   </div>
                </div>

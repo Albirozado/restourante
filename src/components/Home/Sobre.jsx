@@ -1,9 +1,9 @@
 import Image from "next/image";
-import avatar from "../../../public/image/ensaio/avatar.jpg"
-import offset1 from "../../../public/image/ensaio/about/1.jpg"
-import offset3 from "../../../public/image/ensaio//about/3.jpg"
-import offset4 from "../../../public/image/ensaio//about/4.jpg"
-import offset2 from "../../../public/image/ensaio//about/2.jpg"
+import avatar from "../../../public/image/ensaio/capeudecoz.png"
+import offset1 from "../../../public/image/ensaio/about/1re.png"
+import offset3 from "../../../public/image/ensaio//about/2re.png"
+import offset4 from "../../../public/image/ensaio//about/3re.png"
+import offset2 from "../../../public/image/ensaio//about/4re.png"
 
 
 
@@ -14,8 +14,8 @@ export default function Sobre(){
                <div className="row justify-content-between align-items-center">
                   <div className="col-lg-5 mb-6 mb-lg-0">
                      <span className="label-title mb-3">Nossa Historia</span>
-                     <h2 className="h3 font-alt mb-3">Um restaurante alegre inspirado na cultura da culinária moçambicana</h2>
-                     <p>Chegou a hora de dar vida a essas ideias e planos. É aqui que realmente começamos a visualizar seus esboços de guardanapos e transformá-los em lindos pixels. Agora que sua marca está toda arrumada e pronta para a festa.</p>
+                     <h2 className="h3 font-alt mb-3">Sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden.</p>
                      <div className="media align-items-center">
                         <Image src={avatar} className="avatar-md rounded-circle mr-3"/>
                         <div className="media-body">
