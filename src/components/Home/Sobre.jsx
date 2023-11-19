@@ -15,7 +15,7 @@ export default function Sobre(){
                   <div className="col-lg-5 mb-6 mb-lg-0">
                      <span className="label-title mb-3">Nossa Historia</span>
                      <h2 className="h3 font-alt mb-3">Sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
-                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden.</p>
+                     <p>Duis aute irure dolor in reprehenderit in voluptate  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden.</p>
                      <div className="media align-items-center">
                         <Image src={avatar} className="avatar-md rounded-circle mr-3"/>
                         <div className="media-body">
