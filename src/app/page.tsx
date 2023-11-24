@@ -6,6 +6,7 @@ import Menu from "../components/Home/Menu"
 import Services from "../components/Home/Services"
 import Galeria from "../components/Home/Galeria"
 import GetFastFood from "../components/BackEnd/GetFastFood"
+import Footer from "@/components/Home/Footer"
 export default function Home() {
   return (
     <>
@@ -18,6 +19,9 @@ export default function Home() {
       <div style={{ padding: "0 0.5rem"}}>
         <GetFastFood/>
       </div>
+      <footer>
+        <Footer/>
+      </footer>
     </>
     
   );

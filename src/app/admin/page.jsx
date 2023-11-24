@@ -3,6 +3,7 @@ import styles from "../../components/ui/adminStyles.module.css"
 import MenuCompo from "../admin/menuCompo"
 import Galeria from "../admin/getGaleriaAdmin"
 import FetchApi from "../../components/BackEnd/fetchApi"
+import Footer from "@/components/Home/Footer"
 export default function Admin(){
     return(
         <>
@@ -23,6 +24,9 @@ export default function Admin(){
                     </div>
                     
                 </section>
+                <footer>
+                    <Footer/>
+                </footer>
 
             </section>
 

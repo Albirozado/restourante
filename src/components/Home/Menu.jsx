@@ -1,4 +1,7 @@
+import Loading from "@/app/loading"
 import Image from "next/image"
+import { Suspense } from "react"
+import { Alert, Space } from 'antd';
 
 export default async function Menu(){
    const  res = await fetch("https://smiling-gray-centipede.cyclic.app/api/getmaispedidos",{
@@ -22,18 +25,38 @@ export default async function Menu(){
            <div className="row justify-content-around align-items-center">
               <div className="col-md-8 col-lg-7 ">
                  <div className="tab-content">
+
                         <div className="tab-pane">
-                           {data.map((m)=>(
-                              <div className="media align-items-center mb-4 " key={m._id}>
-                                 <Image width={100} height={100} className="avatar-sm rounded-circle mr-3" src={m.pratoimage} alt=""/>
-                                 <div className="media-body position-relative">
-                                    <h6 className="mb-0 position-relative  z-index-2 font-size-15"><span className="bg-white">{m.pratonome}  </span></h6>
-                                    <span className="dots-price"></span>
-                                    <span className="menu-price mb-0 h6">{m.pratopreco}MTN</span>
-                                    <p className="mb-0 font-size-14">{m.pratodescri}</p>
-                                 </div>
+                           {data.length === 0 ? 
+                              <div>
+                                     <Space
+                                       direction="vertical"
+                                       style={{
+                                          width: '100%',
+                                       }}
+                                    >
+                                       <Alert message="SEM DADOS AINDA" banner className=" font-semibold"/>
+                                    </Space>
                               </div>
+
+                              :
+                              <>
+                           {data.map((m)=>(
+                              <Suspense fallback = {<Loading/>} key={m._id}>
+                                 <div className="media align-items-center mb-4 " key={m._id}>
+                                    <Image width={100} height={100} className="avatar-sm rounded-circle mr-3" src={m.pratoimage} alt=""/>
+                                    <div className="media-body position-relative">
+                                       <h6 className="mb-0 position-relative  z-index-2 font-size-15"><span className="bg-white">{m.pratonome}</span></h6>
+                                       <span className="dots-price"></span>
+                                       <span className="menu-price mb-0 h6  ">{m.pratopreco}MTN</span>
+                                       <p className="mb-0 font-size-14">{m.pratodescri}</p>
+                                    </div>
+                                 </div>
+
+                              </Suspense>
                            ))}
+                              </>
+                           }
                         </div>
                     </div>
               </div>

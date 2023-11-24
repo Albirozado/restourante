@@ -1,4 +1,5 @@
 
+import Footer from '@/components/Home/Footer'
 import NavBar from '@/components/Home/NavBar'
 import type { Metadata } from 'next'
 import dynamic from "next/dynamic"
@@ -26,6 +27,9 @@ export default function MenuLayout({
             <NavLink/>
           </header>
         <main> {children}</main>
+        <footer>
+          <Footer/>
+        </footer>
       </body>
     </html>
   )

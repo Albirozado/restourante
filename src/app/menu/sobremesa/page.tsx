@@ -1,4 +1,6 @@
 import MenuCompo from "@/components/menu/MenuCompo"
+import { Alert, Space } from 'antd';
+
 
 export default async function SobremesaPage(){
     const response = await fetch("https://smiling-gray-centipede.cyclic.app/api/getsobremensa",{
@@ -9,6 +11,20 @@ export default async function SobremesaPage(){
         
         <section className="w-[1000px] max-w-full mx-auto">
             <div className="grid grid-cols-1 gap-2 sm:gap-4 sm:grid-cols-2  pb-3">
+                {data.length === 0 ? 
+                 <div>
+                 <Space
+                                   direction="vertical"
+                                   style={{
+                                      width: '100%',
+                                   }}
+                                >
+                                   <Alert message="SEM DADOS AINDA" banner className=" font-semibold"/>
+                                </Space>
+            </div>
+            :
+            <>
+            
             {data.map((en: any)=>(
                 <div className="flex flex-row justify-between flex-1 p-2 rounded-sm shadow-sm " style={{border: "solid 1px rgba(0,0,0,.12)"}} key={en._id}>
                     <MenuCompo
@@ -20,6 +36,8 @@ export default async function SobremesaPage(){
                 </div>
     
             ))}
+            </>
+                }
                 
             </div>
 

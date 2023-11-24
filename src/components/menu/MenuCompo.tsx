@@ -12,9 +12,9 @@ const {base64} = await getPlaiceholder(buffer)
         <div >
             <div className="space-y-2">
                 <h3 className="text-base font-semibold leading-6 text-gray-700 line-clamp-2">{props.nome}</h3>
-                <p className="text-sm font-light text-gray-500 line-clamp-2">Frango tradicional, acompanhado de alface americana e batata-frita. Acompanha porção de Arroz</p>
+                <p className="text-sm font-light text-gray-500 line-clamp-2">{props.descri}</p>
             </div>
-            <div className="mt-3 text-base text-gray-700 md:mt-6">R$ 32,00</div>
+            <div className="mt-3 text-base text-gray-700 md:mt-6">{props.preco} Mts</div>
 
         </div>
         <div className="p-1 ml-4">
