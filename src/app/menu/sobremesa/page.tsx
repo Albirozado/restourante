@@ -1,5 +1,8 @@
+import Loading from "@/app/loading";
 import MenuCompo from "@/components/menu/MenuCompo"
 import { Alert, Space } from 'antd';
+import { Suspense } from "react"
+
 
 
 export default async function SobremesaPage(){
@@ -24,8 +27,10 @@ export default async function SobremesaPage(){
             </div>
             :
             <>
+
             
             {data.map((en: any)=>(
+                <Suspense fallback = {<Loading/>} key={en._id}>
                 <div className="flex flex-row justify-between flex-1 p-2 rounded-sm shadow-sm " style={{border: "solid 1px rgba(0,0,0,.12)"}} key={en._id}>
                     <MenuCompo
                     nome = {en.pratonome}
@@ -34,6 +39,7 @@ export default async function SobremesaPage(){
                     />
 
                 </div>
+                </Suspense>
     
             ))}
             </>
