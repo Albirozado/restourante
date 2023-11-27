@@ -14,8 +14,7 @@ const {base64} = await getPlaiceholder(buffer)
                 <h3 className="text-base font-semibold leading-6 text-gray-700 line-clamp-2">{props.nome}</h3>
                 <p className="text-sm font-light text-gray-500 line-clamp-2">{props.descri}</p>
             </div>
-            <div className="mt-3 text-base text-gray-700 md:mt-6">{props.preco} Mts</div>
-
+            <div className="mt-3 text-base font-semibold text-gray-700 md:mt-6">{props.preco} Mts</div>
         </div>
         <div className="p-1 ml-4">
             <div className="overflow-hidden rounded-lg w-28 h-28 lg:w-32 lg:h-32 sm:w-30 sm:h-30">
