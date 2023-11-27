@@ -73,7 +73,7 @@ export default function Services(){
                  <div className="mt-3 pt-3 mb-3 pb-3 ">
                     <div className="divider-border m-auto"></div>
                  </div>
-                 <p className="text-center mb-0">*Dear guests, you are welcomed to dine with us at Foxe restaurant. Have a pleasant dining experience.</p>
+                 <p className="text-center mb-0">*Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
               </div>
            </div>
 

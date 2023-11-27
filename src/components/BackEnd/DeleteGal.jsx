@@ -29,7 +29,7 @@ export default function DeleteGal({id, linkimage}) {
 
     }
     return(
-        <button onClick={DeleteGaleria} style={{color: "black", background: "pink", padding: "0.4rem 0.8rem", fontWeight: "800", cursor: "pointer"}}>REMOVE</button>
+        <button onClick={DeleteGaleria} style={{color: "black", background: "pink", padding: "0.4rem 0.8rem", fontWeight: "800", cursor: "pointer"}}>REMOVER</button>
     )
     
 }

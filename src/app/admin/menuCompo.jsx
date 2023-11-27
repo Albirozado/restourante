@@ -99,7 +99,7 @@ const EnviarDados = async (e) =>{
                 
                                 <form className={styles.menuAdmin} onSubmit={EnviarDados}>
                                 <input type={"file"} name="" id="uploadprato" hidden onChange={(event) => uploadPostImage(event.target.files[0], setPratoImage)}/>
-                                            <label htmlFor="uploadprato" className={styles.carregarPrato}>
+                                            <label htmlFor="uploadprato" className={styles.carregarPrato} style={{cursor: "pointer"}}>
                                                 <span>carregar</span>
                                                 <div>
                                                     <Image

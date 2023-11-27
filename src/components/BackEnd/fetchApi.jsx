@@ -30,8 +30,10 @@ export default async function fetchApi(){
              <div className={styles.testContent}>
                  <span className={styles.pratonome}>{p.pratonome}</span>
                  <p>{p.pratodescri}</p>
-                 <span>{p.pratopreco}</span> <br/>
-                 <span>{p.pratocategoria}</span>
+                 <div style={{display: "flex", justifyContent: "space-between"}}>
+                    <span style={{backgroundColor: "pink", padding: "0.5rem",color:"#333", borderRadius: ".5rem", textTransform: "uppercase", fontWeight: "600"}}> {p.pratocategoria}</span>
+                    <span style={{margin: "0.5rem 0", display: "inline-block", fontWeight: "700"}}>{p.pratopreco}.00Mts</span> <br/>
+                 </div>
              </div>
              <div className={styles.deletePrat}> 
                  <DeletePrato id={p._id} urlimage = {p.pratoimage}/>

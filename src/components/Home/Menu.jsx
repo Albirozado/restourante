@@ -48,7 +48,7 @@ export default async function Menu(){
                                     <div className="media-body position-relative">
                                        <h6 className="mb-0 position-relative  z-index-2 font-size-15"><span className="bg-white">{m.pratonome}</span></h6>
                                        <span className="dots-price"></span>
-                                       <span className="menu-price mb-0 h6  ">{m.pratopreco}MTN</span>
+                                       <span className="menu-price mb-0 h6  ">{m.pratopreco}.00MTN</span>
                                        <p className="mb-0 font-size-14">{m.pratodescri}</p>
                                     </div>
                                  </div>

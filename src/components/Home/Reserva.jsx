@@ -14,7 +14,7 @@ export default function Reserva(){
                               <img src={Dish} alt="" className="max-width-lg mb-3"/>
                               <h1 className="h2 font-alt">Faça Uma Reserva</h1>
                               <p className="lead">Aberto das 8:00 AM - 10:00 PM, todos dias da semana</p>
-                              <a href="#reservation" className="btn btn-dark btn-primary btn-wide scroll">Mesas Disponiveis</a>
+                              <a href="#reservation" className="btn btn-dark btn-primary btn-wide scroll" style={{display: "none"}}>Mesas Disponiveis</a>
                            </div>
                         </div>
                      </div>

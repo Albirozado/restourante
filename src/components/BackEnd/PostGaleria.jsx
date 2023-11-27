@@ -93,7 +93,7 @@ export default function PostGaleria(){
                     <div style={{ margin: "0 auto", display: "flex", justifyContent: "center"}}>
 
                         <Button size="middle" disabled = {progress === 100 ? false : true} onClick={UploadGaleria}
-                        style={{ backgroundColor: "white", fontWeight: "900"}}>POSTAR</Button>
+                        style={{ backgroundColor: "white", fontWeight: "900", marginBottom: "1rem"}}>POSTAR</Button>
                     </div>
                         :
                         <div style={{display: "flex", justifyContent: "center"}}>

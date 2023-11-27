@@ -17,7 +17,7 @@ export default async function MenuPage(){
             <div className="grid grid-cols-1 gap-2 sm:gap-4 sm:grid-cols-2  pb-3">
                 {data.length === 0 ?
 
-                <div style={{minHeight: "75vh"}}>
+                <div >
                      <Space
                                        direction="vertical"
                                        style={{

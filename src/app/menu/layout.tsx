@@ -26,7 +26,7 @@ export default function MenuLayout({
             <NavBar sobre = "/#sobre" reserva = "#reserva" especial = "#especial"/>
             <NavLink/>
           </header>
-        <main> {children}</main>
+        <main style={{minHeight: "75vh"}}> {children}</main>
         <footer>
           <Footer/>
         </footer>

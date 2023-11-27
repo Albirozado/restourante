@@ -8,7 +8,7 @@ export default function Footer(){
               <div className="col-lg-3 col-sm-6 mb-5 mb-lg-0">
                  <a className="d-inline-block mb-3 footer-logo" href="index.html">
                  </a>
-                 <p className="font-size-14 ">Dear guests, you are welcomed to dine with us at Foxe restaurant. Have a pleasant dining experience.</p>
+                 <p className="font-size-14 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
               </div>
               <div className="col-lg-3 col-sm-6 mb-4">
                  <h3 className="h6 text-white mb-3  font-size-15">Nosso Endereço</h3>
@@ -88,10 +88,7 @@ export default function Footer(){
                     </span>
                  </div>
               </div>
-              <div className="col-lg-3 col-sm-6">
-                 <h3 className="h6 text-white mb-3  font-size-15">Instagram</h3>
-                 <ul className="instafeed-list list-inline mb-3" id="instafeed"></ul>
-              </div>
+             
            </div>
            <div className="row align-items-center">
               <div className="col-sm-4 mb-3 mb-sm-0">
