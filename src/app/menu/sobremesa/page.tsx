@@ -35,7 +35,8 @@ export default async function SobremesaPage(){
                     <MenuCompo
                     nome = {en.pratonome}
                     img = {en.pratoimage}
-                    
+                    descri = {en.pratodescri}
+                    preco = {en.pratopreco}
                     />
 
                 </div>
